@@ -40,9 +40,9 @@ namespace KMISApp
 
                     HttpClient client = new HttpClient();
 
-                    client.BaseAddress = new Uri("http://192.168.100.85:8012");
+                    client.BaseAddress = new Uri("http://localhost:8012"); 
 
-                    var response = await client.PostAsync("http://192.168.100.85:8012/api/testing.php", content);
+                    var response = await client.PostAsync("http://localhost:8012/api/testing.php", content);
                     IAsyncResult result = response.Content.ReadAsStringAsync();
                     _ = Navigation.PushAsync(new MainPage());
 
