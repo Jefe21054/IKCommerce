@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.WindowsAzure.MobileServices;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,6 +8,7 @@ namespace KMISApp
     public partial class App : Application
     {
         public static string DataBaseLocation = string.Empty;
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://ikcommerce.azurewebsites.net");
 
         public App()
         {

@@ -30,7 +30,7 @@ namespace KMISApp
                 var user = email.Text;
                 var pass = password.Text;
 
-                try
+                /*try
                 {
                     var postData = new List<KeyValuePair<string, string>>();
                     postData.Add(new KeyValuePair<string, string>("email", user));
@@ -43,15 +43,15 @@ namespace KMISApp
                     client.BaseAddress = new Uri("http://localhost:8012"); 
 
                     var response = await client.PostAsync("http://localhost:8012/api/testing.php", content);
-                    IAsyncResult result = response.Content.ReadAsStringAsync();
-                    _ = Navigation.PushAsync(new MainPage());
+                    IAsyncResult result = response.Content.ReadAsStringAsync();*/
+                    _ = Navigation.PushAsync(new MainPage());/*
 
-                }
-                catch(Exception ex)
+                }*/
+                /*catch(Exception ex)
                 {
                     await DisplayAlert("ERROR", "No se pudo encontrar el usuario", "OK");
                     //return;
-                }
+                }*/
 
                 email.Text = string.Empty;
                 password.Text = string.Empty;

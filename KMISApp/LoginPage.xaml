@@ -8,7 +8,7 @@
                Aspect="AspectFit"
                HorizontalOptions="FillAndExpand"
                Margin="0, 0, 0, 30"/>
-        <Entry Placeholder="Correo Electronico o Usuario"
+        <Entry Placeholder="Correo Electronico"
                Keyboard="Email"
                x:Name="email"/>
         <Entry Placeholder="Clave"

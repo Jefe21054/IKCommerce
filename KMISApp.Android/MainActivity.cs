@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Microsoft.WindowsAzure.MobileServices;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -22,6 +22,7 @@ namespace KMISApp.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            CurrentPlatform.Init();
 
             string dbName = "internalkmis_db.sqlite";
             string folderpath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);

@@ -1,7 +1,25 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KMISApp.SignUpPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="KMISApp.SignUpPage">
     <StackLayout VerticalOptions="Center"
-                 HorizontalOptions="Center">
-        <Label Text="Pagina de Registro"/>
+                 Margin="25">
+        <Entry Placeholder="Correo Electronico"
+               Keyboard="Email"
+               x:Name="emailEntry"/>
+        <Entry Placeholder="Cedula"
+               x:Name="idEntry"/>
+        <Entry Placeholder="Nombre de Usuario"
+               x:Name="userNameEntry"/>
+        <Entry Placeholder="Clave"
+               IsPassword="True"
+               x:Name="passwordEntry"/>
+        <Entry Placeholder="Confirmar Clave"
+               IsPassword="True"
+               x:Name="confirmPasswordEntry"/>
+        <Button x:Name="registerButton"
+                Text="REGISTRARSE"
+                Clicked="registerButton_Clicked"
+                Margin="0,50,0,0"/>
     </StackLayout>
 </ContentPage>

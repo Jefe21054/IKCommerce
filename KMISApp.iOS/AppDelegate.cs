@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 
 using Foundation;
+using Microsoft.WindowsAzure.MobileServices;
 using UIKit;
 
 namespace KMISApp.iOS
@@ -24,6 +25,7 @@ namespace KMISApp.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            CurrentPlatform.Init();
 
             string dbName = "internalkmis_db.sqlite";
             string folderpath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),"..","Library");
