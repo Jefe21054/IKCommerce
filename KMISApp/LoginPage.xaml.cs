@@ -1,4 +1,7 @@
-﻿using System;
+﻿using KMISApp.Model;
+using System;
+using Microsoft.WindowsAzure.MobileServices;
+using System.Linq;
 using System.Collections.Generic;
 using System.Net.Http;
 using Xamarin.Forms;
@@ -27,33 +30,35 @@ namespace KMISApp
             }
             else
             {
-                var user = email.Text;
-                var pass = password.Text;
-
-                /*try
+                try
                 {
-                    var postData = new List<KeyValuePair<string, string>>();
-                    postData.Add(new KeyValuePair<string, string>("email", user));
-                    postData.Add(new KeyValuePair<string, string>("clave", pass));
+                    var user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == email.Text).ToListAsync()).FirstOrDefault();
 
-                    var content = new FormUrlEncodedContent(postData);
-
-                    HttpClient client = new HttpClient();
-
-                    client.BaseAddress = new Uri("http://localhost:8012"); 
-
-                    var response = await client.PostAsync("http://localhost:8012/api/testing.php", content);
-                    IAsyncResult result = response.Content.ReadAsStringAsync();*/
-                    _ = Navigation.PushAsync(new MainPage());/*
-
-                }*/
-                /*catch(Exception ex)
+                    if (user != null)
+                    {
+                        if (user.Clave == password.Text)
+                        {
+                            await Navigation.PushAsync(new MainPage());
+                        }
+                        else
+                        {
+                            await DisplayAlert("ERROR", "Correo electronico o clave incorrectos.", "OK");
+                        }
+                    }
+                    else
+                    {
+                        await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
+                    }
+                }
+                catch(MobileServiceInvalidOperationException ex)
                 {
-                    await DisplayAlert("ERROR", "No se pudo encontrar el usuario", "OK");
-                    //return;
-                }*/
-
-                email.Text = string.Empty;
+                    await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
+                }
+                catch (Exception exe)
+                {
+                    await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
+                }
+                //email.Text = string.Empty;
                 password.Text = string.Empty;
             }
         }
