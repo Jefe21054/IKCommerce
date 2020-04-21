@@ -16,7 +16,7 @@
                Keyboard="Email"/>
         <Entry Placeholder="Escribe la clave de la cuenta"
                x:Name="passwordEntry"/>
-        <Picker Title="Escoje el servicio adquirido"
+        <Picker Title="Escoje el servicio ofertado"
                 x:Name="servicePicker">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
