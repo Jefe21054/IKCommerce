@@ -36,6 +36,7 @@ namespace KMISApp
 
                     if (user != null)
                     {
+                        App.usuario = user;
                         if (user.Clave == password.Text)
                         {
                             await Navigation.PushAsync(new MainPage());

@@ -1,7 +1,70 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="KMISApp.SellPage">
-    <StackLayout VerticalOptions="Center"
-                 HorizontalOptions="Center">
-        <Label Text="Pagina de Ofertas"/>
-    </StackLayout>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="KMISApp.SellPage">
+    <ListView x:Name="cuentaListView"
+              ItemSelected="cuentaListView_ItemSelected">
+        <ListView.Header>
+            <RelativeLayout HorizontalOptions="FillAndExpand">
+                <Label TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Email" RelativeLayout.XConstraint="{ConstraintExpression 
+                       Type=RelativeToParent,Property=Width,Factor=.0000,Constant=0}"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                       Property=Width,Factor=.3333,Constant=0}"/>
+                <Label TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Clave" RelativeLayout.XConstraint="{ConstraintExpression
+                       Type=RelativeToParent,Property=Width,Factor=.3333,Constant=0}"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                       Property=Width,Factor=.3333,Constant=0}"/>
+                <Label TextColor="Black"
+                       FontAttributes="Bold"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       Text="Servicio" RelativeLayout.XConstraint="{ConstraintExpression
+                       Type=RelativeToParent,Property=Width,Factor=.6666,Constant=0}"
+                       RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                       Property=Width,Factor=.3333,Constant=0}"/>
+            </RelativeLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0"
+                               Grid.Column="0"
+                               Text="{Binding Email}"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                        <Label Grid.Row="0"
+                               Grid.Column="1"
+                               Text="{Binding Clave}"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                        <Label Grid.Row="0"
+                               Grid.Column="2"
+                               Text="{Binding Servicio}"
+                               TextColor="Black"
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center"/>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </ContentPage>

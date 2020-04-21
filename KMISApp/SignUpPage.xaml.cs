@@ -49,7 +49,7 @@ namespace KMISApp
                         passwordEntry.Text = string.Empty;
                         confirmPasswordEntry.Text = string.Empty;
                     }
-                    catch (Exception)
+                    catch (Exception exe)
                     {
                     }
                 }

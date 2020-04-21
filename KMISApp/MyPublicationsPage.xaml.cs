@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
+﻿using KMISApp.Model;
+using Microsoft.WindowsAzure.MobileServices;
+using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace KMISApp
@@ -10,6 +11,59 @@ namespace KMISApp
         public MyPublicationsPage()
         {
             InitializeComponent();
+        }
+
+        private async void save_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                Random rnd = new Random();
+                int num = rnd.Next(1, 999999999);
+                string number = num.ToString();
+
+                Cuenta cuenta = new Cuenta()
+                {
+                    Id = number,
+                    Email = emailEntry.Text,
+                    Clave = passwordEntry.Text,
+                    Servicio = servicePicker.SelectedItem.ToString(),
+                    UsuarioEmail = App.usuario.Email
+                };
+
+                bool isEmailEmpty = string.IsNullOrEmpty(emailEntry.Text);
+                bool isPasswordEmpty = string.IsNullOrEmpty(passwordEntry.Text);
+
+                if (isEmailEmpty || isPasswordEmpty)
+                {
+                    await DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
+                }
+                else
+                {
+                    await App.MobileService.GetTable<Cuenta>().InsertAsync(cuenta);
+                    await DisplayAlert("CORRECTO", "Registrado con Exito", "OK");
+                    emailEntry.Text = string.Empty;
+                    passwordEntry.Text = string.Empty;
+                }
+            }
+            catch (MobileServiceInvalidOperationException msio)
+            {
+                Task<string> response = msio.Response.Content.ReadAsStringAsync();
+                await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
+                emailEntry.Text = string.Empty;
+                passwordEntry.Text = string.Empty;
+            }
+            catch (NullReferenceException)
+            {
+                _ = DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
+                emailEntry.Text = string.Empty;
+                passwordEntry.Text = string.Empty;
+            }
+            catch (Exception ex)
+            {
+                _ = DisplayAlert("ERROR", ex.ToString(), "OK");
+                emailEntry.Text = string.Empty;
+                passwordEntry.Text = string.Empty;
+            }
         }
     }
 }
