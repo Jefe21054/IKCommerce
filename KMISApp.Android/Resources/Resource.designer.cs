@@ -10897,115 +10897,166 @@ namespace KMISApp.Droid
 			public const int adquireadd = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int avd_hide_password = 2131165276;
+			public const int americanexpresslogo = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int avd_show_password = 2131165277;
+			public const int avd_hide_password = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int buy = 2131165278;
+			public const int avd_show_password = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int design_bottom_navigation_item_background = 2131165279;
+			public const int buy = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int design_fab_background = 2131165280;
+			public const int design_bottom_navigation_item_background = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int design_ic_visibility = 2131165281;
+			public const int design_fab_background = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int design_ic_visibility_off = 2131165282;
+			public const int design_ic_visibility = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int design_password_eye = 2131165283;
+			public const int design_ic_visibility_off = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int design_snackbar_background = 2131165284;
-			
-			// aapt resource value: 0x7F070069
-			public const int icon = 2131165289;
+			public const int design_password_eye = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int ic_arrow_back = 2131165285;
-			
-			// aapt resource value: 0x7F070066
-			public const int ic_mtrl_chip_checked_black = 2131165286;
-			
-			// aapt resource value: 0x7F070067
-			public const int ic_mtrl_chip_checked_circle = 2131165287;
-			
-			// aapt resource value: 0x7F070068
-			public const int ic_mtrl_chip_close_circle = 2131165288;
-			
-			// aapt resource value: 0x7F07006A
-			public const int launcher_foreground = 2131165290;
-			
-			// aapt resource value: 0x7F07006B
-			public const int MaterialActivityIndicatorBackground = 2131165291;
-			
-			// aapt resource value: 0x7F07006C
-			public const int MaterialProgressBar = 2131165292;
-			
-			// aapt resource value: 0x7F07006D
-			public const int mtrl_snackbar_background = 2131165293;
-			
-			// aapt resource value: 0x7F07006E
-			public const int mtrl_tabs_default_indicator = 2131165294;
-			
-			// aapt resource value: 0x7F07006F
-			public const int navigation_empty_icon = 2131165295;
-			
-			// aapt resource value: 0x7F070070
-			public const int notification_action_background = 2131165296;
-			
-			// aapt resource value: 0x7F070071
-			public const int notification_bg = 2131165297;
-			
-			// aapt resource value: 0x7F070072
-			public const int notification_bg_low = 2131165298;
-			
-			// aapt resource value: 0x7F070073
-			public const int notification_bg_low_normal = 2131165299;
-			
-			// aapt resource value: 0x7F070074
-			public const int notification_bg_low_pressed = 2131165300;
-			
-			// aapt resource value: 0x7F070075
-			public const int notification_bg_normal = 2131165301;
-			
-			// aapt resource value: 0x7F070076
-			public const int notification_bg_normal_pressed = 2131165302;
-			
-			// aapt resource value: 0x7F070077
-			public const int notification_icon_background = 2131165303;
-			
-			// aapt resource value: 0x7F070078
-			public const int notification_template_icon_bg = 2131165304;
+			public const int design_snackbar_background = 2131165285;
 			
 			// aapt resource value: 0x7F070079
-			public const int notification_template_icon_low_bg = 2131165305;
+			public const int icon = 2131165305;
+			
+			// aapt resource value: 0x7F070066
+			public const int ic_amex = 2131165286;
+			
+			// aapt resource value: 0x7F070067
+			public const int ic_amex_blue = 2131165287;
+			
+			// aapt resource value: 0x7F070068
+			public const int ic_amex_light = 2131165288;
+			
+			// aapt resource value: 0x7F070069
+			public const int ic_arrow_back = 2131165289;
+			
+			// aapt resource value: 0x7F07006A
+			public const int ic_chip = 2131165290;
+			
+			// aapt resource value: 0x7F07006B
+			public const int ic_cvv = 2131165291;
+			
+			// aapt resource value: 0x7F07006C
+			public const int ic_date = 2131165292;
+			
+			// aapt resource value: 0x7F07006D
+			public const int ic_dinersclub = 2131165293;
+			
+			// aapt resource value: 0x7F07006E
+			public const int ic_dinersclub_white = 2131165294;
+			
+			// aapt resource value: 0x7F07006F
+			public const int ic_discover = 2131165295;
+			
+			// aapt resource value: 0x7F070070
+			public const int ic_discover_light = 2131165296;
+			
+			// aapt resource value: 0x7F070071
+			public const int ic_jcb = 2131165297;
+			
+			// aapt resource value: 0x7F070072
+			public const int ic_mastercard = 2131165298;
+			
+			// aapt resource value: 0x7F070073
+			public const int ic_mastercard_white = 2131165299;
+			
+			// aapt resource value: 0x7F070074
+			public const int ic_mtrl_chip_checked_black = 2131165300;
+			
+			// aapt resource value: 0x7F070075
+			public const int ic_mtrl_chip_checked_circle = 2131165301;
+			
+			// aapt resource value: 0x7F070076
+			public const int ic_mtrl_chip_close_circle = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int ic_visa = 2131165303;
+			
+			// aapt resource value: 0x7F070078
+			public const int ic_visa_white = 2131165304;
 			
 			// aapt resource value: 0x7F07007A
-			public const int notification_tile_bg = 2131165306;
+			public const int launcher_foreground = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int notify_panel_notification_icon_bg = 2131165307;
+			public const int MaterialActivityIndicatorBackground = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int offer = 2131165308;
+			public const int MaterialProgressBar = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int offeradd = 2131165309;
+			public const int mtrl_snackbar_background = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int save = 2131165310;
+			public const int mtrl_tabs_default_indicator = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int tooltip_frame_dark = 2131165311;
+			public const int navigation_empty_icon = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int tooltip_frame_light = 2131165312;
+			public const int nocards = 2131165312;
+			
+			// aapt resource value: 0x7F070081
+			public const int notification_action_background = 2131165313;
+			
+			// aapt resource value: 0x7F070082
+			public const int notification_bg = 2131165314;
+			
+			// aapt resource value: 0x7F070083
+			public const int notification_bg_low = 2131165315;
+			
+			// aapt resource value: 0x7F070084
+			public const int notification_bg_low_normal = 2131165316;
+			
+			// aapt resource value: 0x7F070085
+			public const int notification_bg_low_pressed = 2131165317;
+			
+			// aapt resource value: 0x7F070086
+			public const int notification_bg_normal = 2131165318;
+			
+			// aapt resource value: 0x7F070087
+			public const int notification_bg_normal_pressed = 2131165319;
+			
+			// aapt resource value: 0x7F070088
+			public const int notification_icon_background = 2131165320;
+			
+			// aapt resource value: 0x7F070089
+			public const int notification_template_icon_bg = 2131165321;
+			
+			// aapt resource value: 0x7F07008A
+			public const int notification_template_icon_low_bg = 2131165322;
+			
+			// aapt resource value: 0x7F07008B
+			public const int notification_tile_bg = 2131165323;
+			
+			// aapt resource value: 0x7F07008C
+			public const int notify_panel_notification_icon_bg = 2131165324;
+			
+			// aapt resource value: 0x7F07008D
+			public const int offer = 2131165325;
+			
+			// aapt resource value: 0x7F07008E
+			public const int offeradd = 2131165326;
+			
+			// aapt resource value: 0x7F07008F
+			public const int save = 2131165327;
+			
+			// aapt resource value: 0x7F070090
+			public const int tooltip_frame_dark = 2131165328;
+			
+			// aapt resource value: 0x7F070091
+			public const int tooltip_frame_light = 2131165329;
 			
 			static Drawable()
 			{
@@ -11985,25 +12036,76 @@ namespace KMISApp.Droid
 			public const int adquireadd = 2131492865;
 			
 			// aapt resource value: 0x7F0C0002
-			public const int buy = 2131492866;
+			public const int americanexpresslogo = 2131492866;
 			
 			// aapt resource value: 0x7F0C0003
-			public const int icon = 2131492867;
+			public const int buy = 2131492867;
+			
+			// aapt resource value: 0x7F0C0013
+			public const int icon = 2131492883;
+			
+			// aapt resource value: 0x7F0C0014
+			public const int icon_round = 2131492884;
 			
 			// aapt resource value: 0x7F0C0004
-			public const int icon_round = 2131492868;
+			public const int ic_amex = 2131492868;
 			
 			// aapt resource value: 0x7F0C0005
-			public const int launcher_foreground = 2131492869;
+			public const int ic_amex_blue = 2131492869;
 			
 			// aapt resource value: 0x7F0C0006
-			public const int offer = 2131492870;
+			public const int ic_amex_light = 2131492870;
 			
 			// aapt resource value: 0x7F0C0007
-			public const int offeradd = 2131492871;
+			public const int ic_chip = 2131492871;
 			
 			// aapt resource value: 0x7F0C0008
-			public const int save = 2131492872;
+			public const int ic_cvv = 2131492872;
+			
+			// aapt resource value: 0x7F0C0009
+			public const int ic_date = 2131492873;
+			
+			// aapt resource value: 0x7F0C000A
+			public const int ic_dinersclub = 2131492874;
+			
+			// aapt resource value: 0x7F0C000B
+			public const int ic_dinersclub_white = 2131492875;
+			
+			// aapt resource value: 0x7F0C000C
+			public const int ic_discover = 2131492876;
+			
+			// aapt resource value: 0x7F0C000D
+			public const int ic_discover_light = 2131492877;
+			
+			// aapt resource value: 0x7F0C000E
+			public const int ic_jcb = 2131492878;
+			
+			// aapt resource value: 0x7F0C000F
+			public const int ic_mastercard = 2131492879;
+			
+			// aapt resource value: 0x7F0C0010
+			public const int ic_mastercard_white = 2131492880;
+			
+			// aapt resource value: 0x7F0C0011
+			public const int ic_visa = 2131492881;
+			
+			// aapt resource value: 0x7F0C0012
+			public const int ic_visa_white = 2131492882;
+			
+			// aapt resource value: 0x7F0C0015
+			public const int launcher_foreground = 2131492885;
+			
+			// aapt resource value: 0x7F0C0016
+			public const int nocards = 2131492886;
+			
+			// aapt resource value: 0x7F0C0017
+			public const int offer = 2131492887;
+			
+			// aapt resource value: 0x7F0C0018
+			public const int offeradd = 2131492888;
+			
+			// aapt resource value: 0x7F0C0019
+			public const int save = 2131492889;
 			
 			static Mipmap()
 			{

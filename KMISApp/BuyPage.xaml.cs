@@ -20,7 +20,7 @@ namespace KMISApp
 
         private void ventasListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Navigation.PushAsync(new CreditCardPage());
+            Navigation.PushAsync(new Views.CreditCardPage());
         }
     }
 }

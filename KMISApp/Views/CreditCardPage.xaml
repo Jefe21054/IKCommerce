@@ -4,13 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:fastEntry="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
              xmlns:local="clr-namespace:KMISApp.Views"
-             x:Class="KMISApp.CreditCardPage">
+             x:Class="KMISApp.Views.CreditCardPage">
     <NavigationPage.TitleView>
         <Label Text="Payment"
                     HorizontalOptions="CenterAndExpand"
                     FontSize="17"
                     FontAttributes="Bold"
-                    TextColor="{StaticResource PrimaryDark}"/>
+                    TextColor="{StaticResource myWhite}"/>
     </NavigationPage.TitleView>
     <ScrollView>
         <Grid VerticalOptions="FillAndExpand"
@@ -31,7 +31,7 @@
                 <ColumnDefinition Width="5*"/>
             </Grid.ColumnDefinitions>
 
-            <local:CreditCardView Grid.Row="0"
+            <local:CreditCardDisplayView Grid.Row="0"
                                          Grid.Column="0"
                                          Grid.ColumnSpan="3"/>
 

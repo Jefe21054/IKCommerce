@@ -26,6 +26,7 @@ namespace KMISApp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             CurrentPlatform.Init();
+            Xamarin.Forms.FormsMaterial.Init();
 
             string dbName = "internalkmis_db.sqlite";
             string folderpath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),"..","Library");
