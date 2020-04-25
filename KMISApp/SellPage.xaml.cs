@@ -20,7 +20,12 @@ namespace KMISApp
 
         private void cuentaListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
+            var selectedPost = cuentaListView.SelectedItem as Cuenta;
 
+            if(selectedPost != null)
+            {
+                Navigation.PushAsync(new OfferDetailPage(selectedPost));
+            }
         }
     }
 }

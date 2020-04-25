@@ -27,5 +27,10 @@ namespace KMISApp
         {
             Navigation.PushAsync(new MyDBPage());
         }
+
+        private void userSettings_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new UserSettingsPage(App.usuario));
+        }
     }
 }

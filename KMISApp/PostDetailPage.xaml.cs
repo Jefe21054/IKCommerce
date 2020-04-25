@@ -49,24 +49,28 @@ namespace KMISApp
             passwordEntry.Text = string.Empty;
         }
 
-        void eraseButton_Clicked(System.Object sender, System.EventArgs e)
+        async void eraseButton_Clicked(System.Object sender, System.EventArgs e)
         {
             using (SQLiteConnection connection = new SQLiteConnection(App.DataBaseLocation))
             {
                 connection.CreateTable<Post>();
-                int rows = connection.Delete(selectedPost);
+                bool answer = await DisplayAlert("CAUTION", "Are you sure you want to erase your adquisition?", "YES", "NO");
+                if (answer)
+                {
+                    int rows = connection.Delete(selectedPost);
 
-                if (rows > 0)
-                {
-                    DisplayAlert("CORRECTO!",
-                        "Se borro la informacion de tu adquisicion",
-                        "OK");
-                }
-                else
-                {
-                    DisplayAlert("ERROR",
-                        "No se pudo borrar la informacion de tu adquisicion",
-                        "OK");
+                    if (rows > 0)
+                    {
+                        await DisplayAlert("CORRECTO!",
+                            "Se borro la informacion de tu adquisicion",
+                            "OK");
+                    }
+                    else
+                    {
+                        await DisplayAlert("ERROR",
+                            "No se pudo borrar la informacion de tu adquisicion",
+                            "OK");
+                    }
                 }
             }
             emailEntry.Text = string.Empty;

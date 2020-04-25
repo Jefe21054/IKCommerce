@@ -51,11 +51,11 @@ namespace KMISApp
                         await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
                     }
                 }
-                catch(MobileServiceInvalidOperationException ex)
+                catch(MobileServiceInvalidOperationException)
                 {
                     await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
                 }
-                catch (Exception exe)
+                catch (Exception)
                 {
                     await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
                 }

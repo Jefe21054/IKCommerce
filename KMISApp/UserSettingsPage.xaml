@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="KMISApp.UserSettingsPage">
+    <StackLayout Margin="30"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center">
+        <Label x:Name="emailLabel"
+               TextColor="Black"/>
+        <Entry Placeholder="Escribe el nuevo usuario de la cuenta"
+               x:Name="userNameEntry"/>
+        <Entry Placeholder="Escribe la nueva clave de la cuenta"
+               x:Name="passwordEntry"/>
+        <Button Margin="0,50,0,0"
+                x:Name="updateButton"
+                Clicked="updateButton_Clicked"
+                Text="ACTUALIZAR"
+                BackgroundColor="DarkSeaGreen"/>
+        <Button Margin="0,30,0,0"
+                x:Name="eraseButton"
+                Clicked="eraseButton_Clicked"
+                Text="BORRAR"
+                BackgroundColor="Red"/>
+    </StackLayout>
+</ContentPage>

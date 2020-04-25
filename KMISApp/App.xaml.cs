@@ -1,6 +1,4 @@
-﻿
-
-using KMISApp.Model;
+﻿using KMISApp.Model;
 using Microsoft.WindowsAzure.MobileServices;
 using Xamarin.Forms;
 

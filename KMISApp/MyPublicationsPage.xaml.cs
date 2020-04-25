@@ -58,9 +58,9 @@ namespace KMISApp
                 emailEntry.Text = string.Empty;
                 passwordEntry.Text = string.Empty;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                _ = DisplayAlert("ERROR", ex.ToString(), "OK");
+                _ = DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
                 emailEntry.Text = string.Empty;
                 passwordEntry.Text = string.Empty;
             }

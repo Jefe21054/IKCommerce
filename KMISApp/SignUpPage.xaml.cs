@@ -37,7 +37,7 @@ namespace KMISApp
                         passwordEntry.Text = string.Empty;
                         confirmPasswordEntry.Text = string.Empty;
                         await DisplayAlert("CORRECTO", "Registrado con Exito", "OK");
-                        _ = Navigation.PushAsync(new LoginPage());
+                        await Navigation.PushAsync(new LoginPage());
                     }
                     catch (MobileServiceInvalidOperationException ex)
                     {
@@ -49,8 +49,14 @@ namespace KMISApp
                         passwordEntry.Text = string.Empty;
                         confirmPasswordEntry.Text = string.Empty;
                     }
-                    catch (Exception exe)
+                    catch (Exception)
                     {
+                        await DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
+                        emailEntry.Text = string.Empty;
+                        userNameEntry.Text = string.Empty;
+                        idEntry.Text = string.Empty;
+                        passwordEntry.Text = string.Empty;
+                        confirmPasswordEntry.Text = string.Empty;
                     }
                 }
                 else

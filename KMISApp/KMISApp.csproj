@@ -34,11 +34,20 @@
     <EmbeddedResource Include="Assets\Images\web_hi_res_512.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="UserSettingsPage.xaml.cs">
+      <DependentUpon>UserSettingsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\CreditCardDisplayView.xaml.cs">
       <DependentUpon>CreditCardDisplayView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Update="OfferDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UserSettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\CreditCardPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

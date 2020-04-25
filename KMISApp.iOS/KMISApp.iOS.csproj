@@ -349,5 +349,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\nocards%403x.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BundleResource Include="Resources\usersettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usersettings%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\usersettings%403x.png" />
+  </ItemGroup>
 </Project>
