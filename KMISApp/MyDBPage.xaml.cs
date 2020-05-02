@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using KMISApp.Model;
 using SQLite;
 using Xamarin.Forms;
@@ -55,15 +54,15 @@ namespace KMISApp
                     passwordEntry.Text = string.Empty;
                 }
             }
-            catch (NullReferenceException exe)
+            catch (NullReferenceException)
             {
                 DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
                 emailEntry.Text = string.Empty;
                 passwordEntry.Text = string.Empty;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                DisplayAlert("ERROR", ex.ToString(), "OK");
+                DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
                 emailEntry.Text = string.Empty;
                 passwordEntry.Text = string.Empty;
             }

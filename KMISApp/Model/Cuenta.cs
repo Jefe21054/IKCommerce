@@ -11,5 +11,10 @@
         public string Servicio { get; set; }
 
         public string UsuarioEmail { get; set; }
+
+        public static async void Insert(Cuenta cuenta)
+        {
+            await App.MobileService.GetTable<Cuenta>().InsertAsync(cuenta);
+        }
     }
 }

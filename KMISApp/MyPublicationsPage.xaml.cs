@@ -39,7 +39,7 @@ namespace KMISApp
                 }
                 else
                 {
-                    await App.MobileService.GetTable<Cuenta>().InsertAsync(cuenta);
+                    Cuenta.Insert(cuenta);
                     await DisplayAlert("CORRECTO", "Registrado con Exito", "OK");
                     emailEntry.Text = string.Empty;
                     passwordEntry.Text = string.Empty;

@@ -30,7 +30,7 @@ namespace KMISApp
 
                     try
                     {
-                        await App.MobileService.GetTable<Usuario>().InsertAsync(user);
+                        Usuario.Insert(user);
                         emailEntry.Text = string.Empty;
                         userNameEntry.Text = string.Empty;
                         idEntry.Text = string.Empty;
