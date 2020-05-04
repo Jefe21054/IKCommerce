@@ -25,7 +25,7 @@ namespace KMISApp
         public async void loginButton_Clicked(System.Object sender, System.EventArgs e)
         {
             ApiServices apiServices = new ApiServices();
-            
+
             bool isEmailEmpty = string.IsNullOrEmpty(email.Text);
             bool isPasswordEmpty = string.IsNullOrEmpty(password.Text);
 
@@ -37,18 +37,25 @@ namespace KMISApp
             {
                 try
                 {
+                    var user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == email.Text).ToListAsync()).FirstOrDefault();
                     var response = await apiServices.LoginAsync(email.Text, password.Text);
-                    //var user = (await App.MobileService.GetTable<AspNetUsers>().Where(u => u.UserName == email.Text).ToListAsync()).FirstOrDefault();
+                    var username = await apiServices.UsernameAsync(email.Text, password.Text);
 
                     if (response != null)
                     {
-                        //App.usuario = user;
+                        App.usuario = user;
                         await Navigation.PushAsync(new MainPage());
                     }
                     else
                     {
                         await DisplayAlert("ERROR", "Nombre de usuario o clave incorrectos.", "OK");
                     }
+                }
+                catch (MobileServiceInvalidOperationException)
+                {
+                    await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
+                    email.Text = string.Empty;
+                    password.Text = string.Empty;
                 }
                 catch (NullReferenceException)
                 {

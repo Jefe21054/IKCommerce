@@ -1,4 +1,6 @@
-﻿using KMISApp.Services;
+﻿using KMISApp.Model;
+using KMISApp.Services;
+using Microsoft.WindowsAzure.MobileServices;
 using System;
 using Xamarin.Forms;
 
@@ -28,8 +30,19 @@ namespace KMISApp
                 try
                 {
                     var response = await apiServices.RegisterAsync(emailEntry.Text, userNameEntry.Text, passwordEntry.Text, confirmPasswordEntry.Text);
+                    var username = await apiServices.UsernameAsync(emailEntry.Text, passwordEntry.Text);
                     if (response) 
                     {
+                        Random rnd = new Random();
+                        int num = rnd.Next(1, 999999999);
+                        string number = num.ToString();
+
+                        Usuario usuario = new Usuario()
+                        {
+                            Id = number,
+                            Email = username
+                        };
+                        Usuario.Insert(usuario);
                         EmptyEntrys();
                         await DisplayAlert("CORRECTO", "Registrado con Exito", "OK");
                         await Navigation.PushAsync(new LoginPage());
@@ -39,6 +52,11 @@ namespace KMISApp
                         await DisplayAlert("ERROR", "Email or Username alredy exists!\nTry again, please.", "OK");
                         EmptyEntrys();
                     }
+                }
+                catch (MobileServiceInvalidOperationException)
+                {
+                    await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
+                    EmptyEntrys();
                 }
                 catch (NullReferenceException)
                 {
