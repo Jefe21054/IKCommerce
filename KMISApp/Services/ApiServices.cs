@@ -38,7 +38,7 @@ namespace KMISApp.Services
 
                 content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-                var response = client.PostAsync("https://192.168.100.85:45455/api/Account/Register", content);
+                var response = client.PostAsync("https://webapiikcommerce.azurewebsites.net/api/Account/Register", content);
 
                 var mystring = response.GetAwaiter().GetResult();
 
@@ -66,7 +66,7 @@ namespace KMISApp.Services
                         new KeyValuePair<string, string>("grant_type", "password")
                     };
 
-                    var request = new HttpRequestMessage(HttpMethod.Post, "https://192.168.100.85:45455/Token");
+                    var request = new HttpRequestMessage(HttpMethod.Post, "https://webapiikcommerce.azurewebsites.net/Token");
 
                     request.Content = new FormUrlEncodedContent(keyValues);
 
@@ -110,7 +110,7 @@ namespace KMISApp.Services
                         new KeyValuePair<string, string>("grant_type", "password")
                     };
 
-                    var request = new HttpRequestMessage(HttpMethod.Post, "https://192.168.100.85:45455/Token");
+                    var request = new HttpRequestMessage(HttpMethod.Post, "https://webapiikcommerce.azurewebsites.net/Token");
 
                     request.Content = new FormUrlEncodedContent(keyValues);
 
