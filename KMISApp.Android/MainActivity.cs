@@ -7,6 +7,9 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using System.IO;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Security;
 
 namespace KMISApp.Droid
 {
@@ -15,6 +18,10 @@ namespace KMISApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            ServicePointManager.ServerCertificateValidationCallback += (o, cert, chain, errors) => true;
+            // Try this if that is being dumb
+            ServicePointManager.ServerCertificateValidationCallback += ServerCertificateValidationCallback;
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -36,6 +43,11 @@ namespace KMISApp.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+        private bool ServerCertificateValidationCallback(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
+        {
+            return true;
         }
     }
 }

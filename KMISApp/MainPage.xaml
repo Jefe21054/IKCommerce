@@ -7,10 +7,6 @@
             mc:Ignorable="d"
             x:Class="KMISApp.MainPage">
     <TabbedPage.ToolbarItems>
-        <ToolbarItem x:Name="userSettings"
-                     Text="Modificar Usuario"
-                     IconImageSource="usersettings.png"
-                     Clicked="userSettings_Clicked"/>
         <ToolbarItem x:Name="offer"
                      Text="Agregar Ofertas"
                      IconImageSource="offeradd.png"

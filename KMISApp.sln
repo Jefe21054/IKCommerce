@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KMISApp.iOS", "KMISApp.iOS\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KMISApp", "KMISApp\KMISApp.csproj", "{3EF20226-0378-4183-9C80-CA0FAB74CB97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "..\..\ARCHIVOS IVAN IGLESIAS\ESTUDIOS, IVAN\AplicacionKMIJ\WebAPI\WebAPI\WebAPI.csproj", "{3B1ED123-9656-490F-8C5A-B66F464E0AD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,18 @@ Global
 		{3EF20226-0378-4183-9C80-CA0FAB74CB97}.Release|iPhone.Build.0 = Release|Any CPU
 		{3EF20226-0378-4183-9C80-CA0FAB74CB97}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{3EF20226-0378-4183-9C80-CA0FAB74CB97}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Release|iPhone.Build.0 = Release|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{3B1ED123-9656-490F-8C5A-B66F464E0AD7}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

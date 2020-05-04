@@ -1,80 +1,60 @@
-﻿using KMISApp.Model;
-using Microsoft.WindowsAzure.MobileServices;
+﻿using KMISApp.Services;
 using System;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace KMISApp
 {
     public partial class SignUpPage : ContentPage
     {
+        ApiServices apiServices = new ApiServices();
+
         public SignUpPage()
         {
             InitializeComponent();
         }
 
+        public void EmptyEntrys()
+        {
+            emailEntry.Text = string.Empty;
+            userNameEntry.Text = string.Empty;
+            passwordEntry.Text = string.Empty;
+            confirmPasswordEntry.Text = string.Empty;
+        }
+
         private async void registerButton_Clicked(object sender, EventArgs e)
         {
-            if(idEntry.Text.Length == 10)
+            if (passwordEntry.Text == confirmPasswordEntry.Text)
             {
-                if (passwordEntry.Text == confirmPasswordEntry.Text)
+                try
                 {
-                    //We can register
-                    Usuario user = new Usuario()
+                    var response = await apiServices.RegisterAsync(emailEntry.Text, userNameEntry.Text, passwordEntry.Text, confirmPasswordEntry.Text);
+                    if (response) 
                     {
-                        Email = emailEntry.Text,
-                        Clave = passwordEntry.Text,
-                        Username = userNameEntry.Text,
-                        Id = idEntry.Text
-                    };
-
-                    try
-                    {
-                        Usuario.Insert(user);
-                        emailEntry.Text = string.Empty;
-                        userNameEntry.Text = string.Empty;
-                        idEntry.Text = string.Empty;
-                        passwordEntry.Text = string.Empty;
-                        confirmPasswordEntry.Text = string.Empty;
+                        EmptyEntrys();
                         await DisplayAlert("CORRECTO", "Registrado con Exito", "OK");
                         await Navigation.PushAsync(new LoginPage());
                     }
-                    catch (MobileServiceInvalidOperationException ex)
+                    else
                     {
-                        Task<string> response = ex.Response.Content.ReadAsStringAsync();
-                        await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
-                        emailEntry.Text = string.Empty;
-                        userNameEntry.Text = string.Empty;
-                        idEntry.Text = string.Empty;
-                        passwordEntry.Text = string.Empty;
-                        confirmPasswordEntry.Text = string.Empty;
-                    }
-                    catch (Exception)
-                    {
-                        await DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
-                        emailEntry.Text = string.Empty;
-                        userNameEntry.Text = string.Empty;
-                        idEntry.Text = string.Empty;
-                        passwordEntry.Text = string.Empty;
-                        confirmPasswordEntry.Text = string.Empty;
+                        await DisplayAlert("ERROR", "Email or Username alredy exists!\nTry again, please.", "OK");
+                        EmptyEntrys();
                     }
                 }
-                else
+                catch (NullReferenceException)
                 {
-                    await DisplayAlert("ERROR", "Las claves no coinciden, ingresa de nuevo", "OK");
-                    emailEntry.Text = string.Empty;
-                    userNameEntry.Text = string.Empty;
-                    idEntry.Text = string.Empty;
-                    passwordEntry.Text = string.Empty;
-                    confirmPasswordEntry.Text = string.Empty;
+                    await DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
+                    EmptyEntrys();
+                }
+                catch (Exception)
+                {
+                    await DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
+                    EmptyEntrys();
                 }
             }
             else
             {
-                await DisplayAlert("ERROR", "La cedula obligatoriamente tiene 10 digitos", "OK");
-                idEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
-                confirmPasswordEntry.Text = string.Empty;
+                await DisplayAlert("ERROR", "Las claves no coinciden, ingresa de nuevo", "OK");
+                EmptyEntrys();
             }
         }
     }

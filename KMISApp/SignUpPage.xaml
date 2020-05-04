@@ -7,8 +7,6 @@
         <Entry Placeholder="Correo Electronico"
                Keyboard="Email"
                x:Name="emailEntry"/>
-        <Entry Placeholder="Cedula"
-               x:Name="idEntry"/>
         <Entry Placeholder="Nombre de Usuario"
                x:Name="userNameEntry"/>
         <Entry Placeholder="Clave"

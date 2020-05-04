@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-
+using System.Net;
 using Foundation;
 using Microsoft.WindowsAzure.MobileServices;
 using UIKit;
@@ -24,6 +24,8 @@ namespace KMISApp.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            ServicePointManager.ServerCertificateValidationCallback += (o, cert, chain, errors) => true;
+
             global::Xamarin.Forms.Forms.Init();
             CurrentPlatform.Init();
             Xamarin.Forms.FormsMaterial.Init();

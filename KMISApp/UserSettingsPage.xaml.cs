@@ -10,28 +10,28 @@ namespace KMISApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserSettingsPage : ContentPage
     {
-        Usuario selectedPost;
+        RegisterBindingModel selectedPost;
         
         public UserSettingsPage()
         {
 
         }
         
-        public UserSettingsPage(Usuario selectedPost)
+        public UserSettingsPage(RegisterBindingModel selectedPost)
         {
             InitializeComponent();
 
             this.selectedPost = selectedPost;
 
             emailLabel.Text = selectedPost.Email;
-            userNameEntry.Text = selectedPost.Username;
-            passwordEntry.Text = selectedPost.Clave;
+            userNameEntry.Text = selectedPost.UserName;
+            passwordEntry.Text = selectedPost.Password;
         }
 
         private async void updateButton_Clicked(object sender, EventArgs e)
         {
-            selectedPost.Clave = passwordEntry.Text;
-            selectedPost.Username = userNameEntry.Text;
+            selectedPost.Password = passwordEntry.Text;
+            selectedPost.UserName = userNameEntry.Text;
 
             try
             {
@@ -44,7 +44,7 @@ namespace KMISApp
                 }
                 else
                 {
-                    await App.MobileService.GetTable<Usuario>().UpdateAsync(selectedPost);
+                    //await App.MobileService.GetTable<Usuario>().UpdateAsync(selectedPost);
                     await DisplayAlert("CORRECTO", "Actualizado con Exito", "OK");
                     passwordEntry.Text = string.Empty;
                 }
@@ -77,7 +77,7 @@ namespace KMISApp
                 bool answer = await DisplayAlert("CAUTION","Are you sure you want to erase your user?","YES","NO");
                 if (answer)
                 {
-                    await App.MobileService.GetTable<Usuario>().DeleteAsync(selectedPost);
+                    //await App.MobileService.GetTable<Usuario>().DeleteAsync(selectedPost);
                     await DisplayAlert("CORRECTO", "Borrado con Exito", "OK");
                     await Navigation.PushAsync(new LoginPage());
                 }
