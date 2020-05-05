@@ -37,10 +37,9 @@ namespace KMISApp
             {
                 try
                 {
-                    var user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == email.Text).ToListAsync()).FirstOrDefault();
                     var response = await apiServices.LoginAsync(email.Text, password.Text);
                     var username = await apiServices.UsernameAsync(email.Text, password.Text);
-
+                    var user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == username).ToListAsync()).FirstOrDefault();
                     if (response != null)
                     {
                         App.usuario = user;
