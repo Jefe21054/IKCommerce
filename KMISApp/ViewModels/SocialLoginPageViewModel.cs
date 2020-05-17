@@ -87,6 +87,7 @@ namespace KMISApp.ViewModels
                                 Email = facebookProfile.Email
                             };
                             Usuario.Insert(socialLoginData);
+                            App.usuario = socialLoginData;
                             await App.Current.MainPage.Navigation.PushAsync(new MainPage());
                             break;
                         case FacebookActionStatus.Canceled:
@@ -138,7 +139,7 @@ namespace KMISApp.ViewModels
                                 Email = _googleService.CurrentUser.Email
                             };
                             Usuario.Insert(socialLoginData);
-
+                            App.usuario = socialLoginData;
                             await App.Current.MainPage.Navigation.PushAsync(new MainPage());
                             break;
                         case GoogleActionStatus.Canceled:
