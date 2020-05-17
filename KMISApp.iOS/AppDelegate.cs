@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net;
 using Foundation;
 using Microsoft.WindowsAzure.MobileServices;
+using Plugin.FacebookClient;
+using Plugin.GoogleClient;
 using UIKit;
 
 namespace KMISApp.iOS
@@ -27,8 +29,11 @@ namespace KMISApp.iOS
             ServicePointManager.ServerCertificateValidationCallback += (o, cert, chain, errors) => true;
 
             global::Xamarin.Forms.Forms.Init();
+            GoogleClientManager.Initialize();
             CurrentPlatform.Init();
             Xamarin.Forms.FormsMaterial.Init();
+            FacebookClientManager.OnActivated();
+            FacebookClientManager.Initialize(app, options);
 
             string dbName = "internalkmis_db.sqlite";
             string folderpath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal),"..","Library");
@@ -37,6 +42,15 @@ namespace KMISApp.iOS
             LoadApplication(new App(fullpath));
 
             return base.FinishedLaunching(app, options);
+        }
+        public override bool OpenUrl(UIApplication app, NSUrl url, NSDictionary options)
+        {
+            GoogleClientManager.OnOpenUrl(app, url, options);
+            return FacebookClientManager.OpenUrl(app, url, options);
+        }
+        public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+        {
+            return FacebookClientManager.OpenUrl(application, url, sourceApplication, annotation);
         }
     }
 }

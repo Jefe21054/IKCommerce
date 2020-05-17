@@ -10,6 +10,9 @@ using System.IO;
 using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Net.Security;
+using Plugin.FacebookClient;
+using Android.Content;
+using Plugin.GoogleClient;
 
 namespace KMISApp.Droid
 {
@@ -27,6 +30,8 @@ namespace KMISApp.Droid
 
             base.OnCreate(savedInstanceState);
 
+            FacebookClientManager.Initialize(this);
+            GoogleClientManager.Initialize(this);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             CurrentPlatform.Init();
@@ -48,6 +53,13 @@ namespace KMISApp.Droid
         private bool ServerCertificateValidationCallback(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         {
             return true;
+        }
+
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent intent)
+        {
+            base.OnActivityResult(requestCode, resultCode, intent);
+            FacebookClientManager.OnActivityResult(requestCode, resultCode, intent);
+            GoogleClientManager.OnAuthCompleted(requestCode, resultCode, intent);
         }
     }
 }

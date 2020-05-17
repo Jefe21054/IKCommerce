@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "455940363342",
+    "firebase_url": "https://ikcommerce.firebaseio.com",
+    "project_id": "ikcommerce",
+    "storage_bucket": "ikcommerce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455940363342:android:d5f0d09df1b4500f939f1f",
+        "android_client_info": {
+          "package_name": "com.kmis.kmis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "455940363342-89fukdusdj2fpfc9hj1l0h6of4bbu9v9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kmis.kmis",
+            "certificate_hash": "47703e9954634ada04d2aa0f808ed3f42e276cd8"
+          }
+        },
+        {
+          "client_id": "455940363342-0vl2qrsd0qs59l9hv0q1qfola5cbc11e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcYp_t3Bt7NMrFfZByR3KcWvPw_dL90P4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "455940363342-0vl2qrsd0qs59l9hv0q1qfola5cbc11e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "455940363342-6rfpl9jktsvvd1vboddk2meb3v27egs1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.KMIS.KMIS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

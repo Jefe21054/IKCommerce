@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>455940363342-6rfpl9jktsvvd1vboddk2meb3v27egs1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.455940363342-6rfpl9jktsvvd1vboddk2meb3v27egs1</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>455940363342-89fukdusdj2fpfc9hj1l0h6of4bbu9v9.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD5wcVBlC6fzqpnMBIXR-Dv2bFW8Bukmbk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>455940363342</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.KMIS.KMIS</string>
+	<key>PROJECT_ID</key>
+	<string>ikcommerce</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ikcommerce.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:455940363342:ios:3bd76a7347482f7c939f1f</string>
+	<key>DATABASE_URL</key>
+	<string>https://ikcommerce.firebaseio.com</string>
+</dict>
+</plist>

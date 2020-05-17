@@ -34,5 +34,24 @@
                         Clicked="forgetPass_Clicked"/>
             </StackLayout>
         </StackLayout>
+        <StackLayout Padding="20"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         x:Name="mainLayout"
+                         BindableLayout.ItemsSource="{Binding AuthenticationNetworks}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <Button Text="{Binding Name, StringFormat='Login with {0}'}"
+                            Command="{Binding Path=BindingContext.OnLoginCommand, Source={x:Reference mainLayout}}"
+                            CommandParameter="{Binding .}"     
+                            HeightRequest="45"
+                            TextColor="{Binding Foreground}"
+                            BackgroundColor="{Binding Background}"
+                            WidthRequest="280"
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="FillAndExpand"/>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
     </StackLayout>
 </ContentPage>

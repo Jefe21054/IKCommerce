@@ -1,13 +1,10 @@
 ﻿using KMISApp.Model;
-using System;
-using Microsoft.WindowsAzure.MobileServices;
-using System.Linq;
-using System.Collections.Generic;
-using System.Net.Http;
-using Xamarin.Forms;
-using KMISApp.Views;
 using KMISApp.Services;
-using System.Threading.Tasks;
+using KMISApp.ViewModels;
+using Microsoft.WindowsAzure.MobileServices;
+using System;
+using System.Linq;
+using Xamarin.Forms;
 
 namespace KMISApp
 {
@@ -17,19 +14,27 @@ namespace KMISApp
         {
             InitializeComponent();
 
-            var assembly = typeof(MainPage);
+            BindingContext = new SocialLoginPageViewModel();
+
+            Type assembly = typeof(MainPage);
 
             logoImage.Source = ImageSource.FromResource("KMISApp.Assets.Images.web_hi_res_512.png", assembly);
         }
 
-        public async void loginButton_Clicked(System.Object sender, System.EventArgs e)
+        private void VaciarCampos()
+        {
+            email.Text = string.Empty;
+            password.Text = string.Empty;
+        }
+
+        public async void loginButton_Clicked(object sender, System.EventArgs e)
         {
             ApiServices apiServices = new ApiServices();
 
             bool isEmailEmpty = string.IsNullOrEmpty(email.Text);
             bool isPasswordEmpty = string.IsNullOrEmpty(password.Text);
 
-            if(isEmailEmpty || isPasswordEmpty)
+            if (isEmailEmpty || isPasswordEmpty)
             {
                 await DisplayAlert("ERROR", "Por favor llena todos los campos!", "OK");
             }
@@ -37,9 +42,9 @@ namespace KMISApp
             {
                 try
                 {
-                    var response = await apiServices.LoginAsync(email.Text, password.Text);
-                    var username = await apiServices.UsernameAsync(email.Text, password.Text);
-                    var user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == username).ToListAsync()).FirstOrDefault();
+                    string response = await apiServices.LoginAsync(email.Text, password.Text);
+                    string username = await apiServices.UsernameAsync(email.Text, password.Text);
+                    Usuario user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == username).ToListAsync()).FirstOrDefault();
                     if (response != null)
                     {
                         App.usuario = user;
@@ -53,14 +58,12 @@ namespace KMISApp
                 catch (MobileServiceInvalidOperationException)
                 {
                     await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
-                    email.Text = string.Empty;
-                    password.Text = string.Empty;
+                    VaciarCampos();
                 }
                 catch (NullReferenceException)
                 {
                     await DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
-                    email.Text = string.Empty;
-                    password.Text = string.Empty;
+                    VaciarCampos();
                 }
                 catch (Exception)
                 {
@@ -71,18 +74,16 @@ namespace KMISApp
             }
         }
 
-        void forgetPass_Clicked(System.Object sender, System.EventArgs e)
+        private void forgetPass_Clicked(object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new ForgetPasswordPage());
-            email.Text = string.Empty;
-            password.Text = string.Empty;
+            VaciarCampos();
         }
 
-        void signUp_Clicked(System.Object sender, System.EventArgs e)
+        private void signUp_Clicked(object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new SignUpPage());
-            email.Text = string.Empty;
-            password.Text = string.Empty;
+            VaciarCampos();
         }
     }
 }
