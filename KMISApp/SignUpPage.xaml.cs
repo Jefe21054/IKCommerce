@@ -15,7 +15,7 @@ namespace KMISApp
             InitializeComponent();
         }
 
-        public void EmptyEntrys()
+        private void EmptyEntrys()
         {
             emailEntry.Text = string.Empty;
             userNameEntry.Text = string.Empty;

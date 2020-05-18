@@ -2,7 +2,6 @@
 using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,6 +28,12 @@ namespace KMISApp
             servicePicker.SelectedItem = selectedPost.Servicio;
         }
 
+        private void EmptyEntrys()
+        {
+            emailEntry.Text = string.Empty;
+            passwordEntry.Text = string.Empty;
+        }
+
         private async void updateButton_Clicked(object sender, EventArgs e)
         {
             selectedPost.Email = emailEntry.Text;
@@ -46,30 +51,26 @@ namespace KMISApp
                 }
                 else
                 {
-                    await App.MobileService.GetTable<Cuenta>().UpdateAsync(selectedPost);
+                    Cuenta.Update(selectedPost);
                     await DisplayAlert("CORRECTO", "Actualizado con Exito", "OK");
-                    emailEntry.Text = string.Empty;
-                    passwordEntry.Text = string.Empty;
+                    EmptyEntrys();
                 }
             }
             catch (MobileServiceInvalidOperationException msio)
             {
                 Task<string> response = msio.Response.Content.ReadAsStringAsync();
                 await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntrys();
             }
             catch (NullReferenceException)
             {
                 await DisplayAlert("ERROR", "Por favor llena todos los campos.", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntrys();
             }
             catch (Exception)
             {
                 await DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntrys();
             }
         }
 
@@ -80,7 +81,7 @@ namespace KMISApp
                 bool answer = await DisplayAlert("CAUTION", "Are you sure you want to erase your offer?", "YES", "NO");
                 if (answer)
                 {
-                    await App.MobileService.GetTable<Cuenta>().DeleteAsync(selectedPost);
+                    Cuenta.Delete(selectedPost);
                     await DisplayAlert("CORRECTO", "Borrado con Exito", "OK");
                     await Navigation.PushAsync(new MainPage());
                 }
@@ -89,20 +90,17 @@ namespace KMISApp
             {
                 Task<string> response = msio.Response.Content.ReadAsStringAsync();
                 await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntrys();
             }
             catch (NullReferenceException)
             {
                 await DisplayAlert("ERROR", "Para borrar deben estar llenos todos los campos.", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntrys();
             }
             catch (Exception)
             {
                 await DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntrys();
             }
         }
     }

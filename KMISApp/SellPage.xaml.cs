@@ -14,15 +14,15 @@ namespace KMISApp
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            List<Cuenta> ofertas = await App.MobileService.GetTable<Cuenta>().Where(p => p.UsuarioEmail == App.usuario.Email).ToListAsync();
+            List<Cuenta> ofertas = await Cuenta.Read();
             cuentaListView.ItemsSource = ofertas;
         }
 
         private void cuentaListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var selectedPost = cuentaListView.SelectedItem as Cuenta;
+            Cuenta selectedPost = cuentaListView.SelectedItem as Cuenta;
 
-            if(selectedPost != null)
+            if (selectedPost != null)
             {
                 Navigation.PushAsync(new OfferDetailPage(selectedPost));
             }

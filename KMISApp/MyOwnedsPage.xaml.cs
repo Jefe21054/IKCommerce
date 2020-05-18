@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using KMISApp.Model;
 using SQLite;
-using KMISApp.Model;
+using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace KMISApp
@@ -21,16 +19,16 @@ namespace KMISApp
             using (SQLiteConnection connection = new SQLiteConnection(App.DataBaseLocation))
             {
                 connection.CreateTable<Post>();
-                var posts = connection.Table<Post>().ToList();
+                List<Post> posts = connection.Table<Post>().ToList();
                 postListView.ItemsSource = posts;
-            }    
+            }
         }
 
-        void postListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        private void postListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var selectedPost = postListView.SelectedItem as Post;
+            Post selectedPost = postListView.SelectedItem as Post;
 
-            if(selectedPost != null)
+            if (selectedPost != null)
             {
                 Navigation.PushAsync(new PostDetailPage(selectedPost));
             }

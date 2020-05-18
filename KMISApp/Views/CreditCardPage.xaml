@@ -10,7 +10,7 @@
                     HorizontalOptions="CenterAndExpand"
                     FontSize="17"
                     FontAttributes="Bold"
-                    TextColor="{StaticResource myWhite}"/>
+                    TextColor="Black"/>
     </NavigationPage.TitleView>
     <ScrollView>
         <Grid VerticalOptions="FillAndExpand"
@@ -140,7 +140,7 @@
                          Grid.Column="0"
                          Grid.ColumnSpan="3"/>
 
-            <Button Text="Purchase for $200"
+            <Button Text="Purchase for $20"
                          BackgroundColor="{Binding CardNumber, Converter={StaticResource CardColorConverter}}"
                          CornerRadius="26"
                          FontSize="18"

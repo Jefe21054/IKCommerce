@@ -1,20 +1,98 @@
-﻿namespace KMISApp.Model
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Threading.Tasks;
+
+namespace KMISApp.Model
 {
-    public class Cuenta
+    public class Cuenta : INotifyPropertyChanged
     {
-        public string Id { get; set; }
+        private string id;
 
-        public string Email { get; set; }
+        public string Id
+        {
+            get { return id; }
+            set 
+            { 
+                id = value;
+                OnPropertyChanged("Id");
+            }
+        }
 
-        public string Clave { get; set; }
+        private string email;
 
-        public string Servicio { get; set; }
+        public string Email
+        {
+            get { return email; }
+            set 
+            { 
+                email = value;
+                OnPropertyChanged("Email");
+            }
+        }
 
-        public string UsuarioEmail { get; set; }
+        private string clave;
+
+        public string Clave
+        {
+            get { return clave; }
+            set 
+            { 
+                clave = value;
+                OnPropertyChanged("Clave");
+            }
+        }
+
+        private string servicio;
+
+        public string Servicio
+        {
+            get { return servicio; }
+            set 
+            { 
+                servicio = value;
+                OnPropertyChanged("Servicio");
+            }
+        }
+
+        private string usuarioEmail;
+
+        public string UsuarioEmail
+        {
+            get { return usuarioEmail; }
+            set 
+            { 
+                usuarioEmail = value;
+                OnPropertyChanged("UsuarioEmail");
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public static async void Insert(Cuenta cuenta)
         {
             await App.MobileService.GetTable<Cuenta>().InsertAsync(cuenta);
+        }
+
+        public static async Task<List<Cuenta>> Read()
+        {
+            List<Cuenta> ofertas = await App.MobileService.GetTable<Cuenta>().Where(p => p.UsuarioEmail == App.usuario.Email).ToListAsync();
+            return ofertas;
+        }
+
+        public static async void Update(Cuenta cuenta)
+        {
+            await App.MobileService.GetTable<Cuenta>().UpdateAsync(cuenta);
+        }
+
+        public static async void Delete(Cuenta cuenta)
+        {
+            await App.MobileService.GetTable<Cuenta>().DeleteAsync(cuenta);
+        }
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
