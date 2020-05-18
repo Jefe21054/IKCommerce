@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace KMISApp
@@ -18,12 +14,12 @@ namespace KMISApp
             InitializeComponent();
         }
 
-        void offer_Clicked(System.Object sender, System.EventArgs e)
+        private void offer_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MyPublicationsPage());
         }
 
-        void owned_Clicked(System.Object sender, System.EventArgs e)
+        private void owned_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MyDBPage());
         }

@@ -8,9 +8,14 @@ namespace KMISApp
 {
     public partial class MyPublicationsPage : ContentPage
     {
+        Cuenta cuenta;
+        
         public MyPublicationsPage()
         {
             InitializeComponent();
+
+            cuenta = new Cuenta();
+            containerStackLayout.BindingContext = cuenta;
         }
 
         private async void save_Clicked(object sender, EventArgs e)
@@ -20,15 +25,9 @@ namespace KMISApp
                 Random rnd = new Random();
                 int num = rnd.Next(1, 999999999);
                 string number = num.ToString();
-
-                Cuenta cuenta = new Cuenta()
-                {
-                    Id = number,
-                    Email = emailEntry.Text,
-                    Clave = passwordEntry.Text,
-                    Servicio = servicePicker.SelectedItem.ToString(),
-                    UsuarioEmail = App.usuario.Email
-                };
+                cuenta.Id = number;
+                cuenta.Servicio = servicePicker.SelectedItem.ToString();
+                cuenta.UsuarioEmail = App.usuario.Email;
 
                 bool isEmailEmpty = string.IsNullOrEmpty(emailEntry.Text);
                 bool isPasswordEmpty = string.IsNullOrEmpty(passwordEntry.Text);

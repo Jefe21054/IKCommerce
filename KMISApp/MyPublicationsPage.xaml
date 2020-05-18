@@ -10,12 +10,15 @@
     </ContentPage.ToolbarItems>
     <StackLayout Margin="30"
                  VerticalOptions="Center"
-                 HorizontalOptions="Center">
+                 HorizontalOptions="Center"
+                 x:Name="containerStackLayout">
         <Entry Placeholder="Escribe el correo de la cuenta"
                x:Name="emailEntry"
-               Keyboard="Email"/>
+               Keyboard="Email"
+               Text="{Binding Email, Mode=TwoWay}"/>
         <Entry Placeholder="Escribe la clave de la cuenta"
-               x:Name="passwordEntry"/>
+               x:Name="passwordEntry"
+               Text="{Binding Clave, Mode=TwoWay}"/>
         <Picker Title="Escoje el servicio ofertado"
                 x:Name="servicePicker">
             <Picker.ItemsSource>
