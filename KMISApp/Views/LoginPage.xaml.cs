@@ -69,8 +69,7 @@ namespace KMISApp
                 {
                     await DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
                 }
-                //email.Text = string.Empty;
-                password.Text = string.Empty;
+                VaciarCampos();
             }
         }
 

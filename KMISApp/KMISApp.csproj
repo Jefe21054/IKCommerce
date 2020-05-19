@@ -43,7 +43,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="UserSettingsPage.xaml.cs">
+    <Compile Update="Views\UserSettingsPage.xaml.cs">
       <DependentUpon>UserSettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\CreditCardDisplayView.xaml.cs">
@@ -51,10 +51,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="OfferDetailPage.xaml">
+    <EmbeddedResource Update="Views\OfferDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="UserSettingsPage.xaml">
+    <EmbeddedResource Update="Views\UserSettingsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CreditCardPage.xaml">
