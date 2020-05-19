@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KMISApp.ViewModels;
+using System;
 using System.ComponentModel;
 using Xamarin.Forms;
 
@@ -9,19 +10,14 @@ namespace KMISApp
     [DesignTimeVisible(false)]
     public partial class MainPage : TabbedPage
     {
+        MainPageViewModel viewModel;
+
         public MainPage()
         {
             InitializeComponent();
-        }
 
-        private void offer_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MyPublicationsPage());
-        }
-
-        private void owned_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new MyDBPage());
+            viewModel = new MainPageViewModel();
+            BindingContext = viewModel;
         }
     }
 }

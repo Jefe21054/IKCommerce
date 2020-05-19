@@ -10,11 +10,11 @@
         <ToolbarItem x:Name="offer"
                      Text="Agregar Ofertas"
                      IconImageSource="offeradd.png"
-                     Clicked="offer_Clicked"/>
+                     Command="{Binding NavigationOfferCommand}"/>
         <ToolbarItem x:Name="owned"
                      Text="Agregar Adquisiciones"
                      IconImageSource="adquireadd"
-                     Clicked="owned_Clicked"/>
+                     Command="{Binding NavigationOwnerCommand}"/>
     </TabbedPage.ToolbarItems>
     <local:BuyPage Title="COMPRAR"
                    IconImageSource="buy.png"/>
