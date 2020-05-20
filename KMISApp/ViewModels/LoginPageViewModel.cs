@@ -1,19 +1,116 @@
 ﻿using KMISApp.Model;
+using KMISApp.Services;
+using KMISApp.ViewModels.Commands;
+using Microsoft.WindowsAzure.MobileServices;
 using Newtonsoft.Json;
 using Plugin.FacebookClient;
 using Plugin.GoogleClient;
 using Plugin.GoogleClient.Shared;
 using System;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace KMISApp.ViewModels
 {
-    public class SocialLoginPageViewModel
+    public class LoginPageViewModel : INotifyPropertyChanged
     {
+        private ApiServices apiServices = new ApiServices();
+
+        public LoginCommand LoginCommand { get; set; }
+
+        private string email;
+
+        public string Email
+        {
+            get { return email; }
+            set 
+            { 
+                email = value;
+                OnPropertyChanged("Email");
+            }
+        }
+
+        private string password;
+
+        public string Password
+        {
+            get { return password; }
+            set 
+            { 
+                password = value;
+                OnPropertyChanged("Password");
+            }
+        }
+
+        public LoginPageViewModel()
+        {
+            LoginCommand = new LoginCommand(this);
+            OnLoginCommand = new Command<AuthNetwork>(async (data) => await LoginAsync(data));
+        }
+
+        private void VaciarCampos()
+        {
+            Email = string.Empty;
+            Password = string.Empty;
+        }
+
+        public async void Login()
+        {
+            bool isEmailEmpty = string.IsNullOrEmpty(Email);
+            bool isPasswordEmpty = string.IsNullOrEmpty(Password);
+
+            if (isEmailEmpty || isPasswordEmpty)
+            {
+                await App.Current.MainPage.DisplayAlert("ERROR", "Por favor llena todos los campos!", "OK");
+            }
+            else
+            {
+                try
+                {
+                    string response = await apiServices.LoginAsync(Email, Password);
+                    string username = await apiServices.UsernameAsync(Email, Password);
+                    Usuario user = (await App.MobileService.GetTable<Usuario>().Where(u => u.Email == username).ToListAsync()).FirstOrDefault();
+                    if (response != null)
+                    {
+                        App.usuario = user;
+                        await App.Current.MainPage.Navigation.PushAsync(new MainPage());
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("ERROR", "Nombre de usuario o clave incorrectos.", "OK");
+                    }
+                }
+                catch (MobileServiceInvalidOperationException)
+                {
+                    await App.Current.MainPage.DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
+                    VaciarCampos();
+                }
+                catch (NullReferenceException)
+                {
+                    await App.Current.MainPage.DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
+                    VaciarCampos();
+                }
+                catch (Exception)
+                {
+                    await App.Current.MainPage.DisplayAlert("ERROR", "Hubo un error cuando intentaste ingresar.", "OK");
+                }
+                VaciarCampos();
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public ICommand OnLoginCommand { get; set; }
 
         IFacebookClient _facebookService = CrossFacebookClient.Current;
@@ -36,11 +133,6 @@ namespace KMISApp.ViewModels
                 Background ="#E6E6E6"
             }
         };
-
-        public SocialLoginPageViewModel()
-        {
-            OnLoginCommand = new Command<AuthNetwork>(async (data) => await LoginAsync(data));
-        }
 
         private async Task LoginAsync(AuthNetwork authNetwork)
         {

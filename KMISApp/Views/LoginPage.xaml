@@ -9,13 +9,16 @@
                HorizontalOptions="FillAndExpand"
                Margin="0, 0, 0, 30"/>
         <Entry Placeholder="Correo Electronico"
+               Keyboard="Email"
+               Text="{Binding Email, Mode=TwoWay}"
                x:Name="email"/>
         <Entry Placeholder="Clave"
                IsPassword="True"
+               Text="{Binding Password, Mode=TwoWay}"
                x:Name="password"/>
         <Button x:Name="loginButton"
                 Text="INGRESAR"
-                Clicked="loginButton_Clicked"
+                Command="{Binding LoginCommand}"
                 Margin="0,50,0,0"/>
         <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">

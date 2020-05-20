@@ -18,6 +18,12 @@ namespace KMISApp
             containerStackLayout.BindingContext = cuenta;
         }
 
+        private void EmptyEntries()
+        {
+            emailEntry.Text = string.Empty;
+            passwordEntry.Text = string.Empty;
+        }
+
         private async void save_Clicked(object sender, EventArgs e)
         {
             try
@@ -40,28 +46,24 @@ namespace KMISApp
                 {
                     Cuenta.Insert(cuenta);
                     await DisplayAlert("CORRECTO", "Registrado con Exito", "OK");
-                    emailEntry.Text = string.Empty;
-                    passwordEntry.Text = string.Empty;
+                    EmptyEntries();
                 }
             }
             catch (MobileServiceInvalidOperationException msio)
             {
                 Task<string> response = msio.Response.Content.ReadAsStringAsync();
                 await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                EmptyEntries();
             }
             catch (NullReferenceException)
             {
-                _ = DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                await DisplayAlert("ERROR", "Por favor llena todos los campos", "OK");
+                EmptyEntries();
             }
             catch (Exception)
             {
-                _ = DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
-                emailEntry.Text = string.Empty;
-                passwordEntry.Text = string.Empty;
+                await DisplayAlert("ERROR", "Algo salio mal :( \nIntentalo de nuevo", "OK");
+                EmptyEntries();
             }
         }
     }

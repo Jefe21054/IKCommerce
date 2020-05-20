@@ -3,13 +3,13 @@ using System.Windows.Input;
 
 namespace KMISApp.ViewModels.Commands
 {
-    public class NavigationOwnerCommand : ICommand
+    public class LoginCommand : ICommand
     {
-        public MainPageViewModel MainPageViewModel { get; set; }
+        public LoginPageViewModel LoginPageViewModel { get; set; }
 
-        public NavigationOwnerCommand(MainPageViewModel mainPageViewModel)
+        public LoginCommand(LoginPageViewModel loginPageViewModel)
         {
-            MainPageViewModel = mainPageViewModel;
+            LoginPageViewModel = loginPageViewModel;
         }
 
         public event EventHandler CanExecuteChanged;
@@ -21,7 +21,7 @@ namespace KMISApp.ViewModels.Commands
 
         public void Execute(object parameter)
         {
-            MainPageViewModel.NavigateOwneds();
+            LoginPageViewModel.Login();
         }
     }
 }
