@@ -23,6 +23,10 @@ namespace KMISApp.ViewModels
 
         public LoginCommand LoginCommand { get; set; }
 
+        public NavigationSignUpCommand NavigationSignUpCommand { get; set; }
+
+        public NavigationForgetPasswordCommand NavigationForgetPasswordCommand { get; set; }
+
         private string email;
 
         public string Email
@@ -51,6 +55,8 @@ namespace KMISApp.ViewModels
         {
             LoginCommand = new LoginCommand(this);
             OnLoginCommand = new Command<AuthNetwork>(async (data) => await LoginAsync(data));
+            NavigationSignUpCommand = new NavigationSignUpCommand(this);
+            NavigationForgetPasswordCommand = new NavigationForgetPasswordCommand(this);
         }
 
         private void VaciarCampos()
@@ -256,6 +262,18 @@ namespace KMISApp.ViewModels
             {
                 Debug.WriteLine(ex.ToString());
             }
+        }
+
+        public void NavigateSignUp()
+        {
+            App.Current.MainPage.Navigation.PushAsync(new SignUpPage());
+            VaciarCampos();
+        }
+
+        public void NavigateForgetPassword()
+        {
+            App.Current.MainPage.Navigation.PushAsync(new ForgetPasswordPage());
+            VaciarCampos();
         }
     }
 }

@@ -26,7 +26,7 @@
                         BackgroundColor="Transparent"
                         TextColor="{StaticResource myColor}"
                         x:Name="signUp"
-                        Clicked="signUp_Clicked"/>
+                        Command="{Binding NavigationSignUpCommand}"/>
             </StackLayout>
             <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
                 <Button Text="Olvidaste tu clave?"
@@ -34,7 +34,7 @@
                         BackgroundColor="Transparent"
                         TextColor="{StaticResource myColor}"
                         x:Name="forgetPass"
-                        Clicked="forgetPass_Clicked"/>
+                        Command="{Binding NavigationForgetPasswordCommand}"/>
             </StackLayout>
         </StackLayout>
         <StackLayout Padding="20"

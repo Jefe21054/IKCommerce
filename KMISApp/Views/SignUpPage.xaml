@@ -7,18 +7,22 @@
                  x:Name="containerStackLayout">
         <Entry Placeholder="Correo Electronico"
                Keyboard="Email"
+               Text="{Binding Email, Mode=TwoWay}"
                x:Name="emailEntry"/>
         <Entry Placeholder="Nombre de Usuario"
+               Text="{Binding Username, Mode=TwoWay}"
                x:Name="userNameEntry"/>
         <Entry Placeholder="Clave"
                IsPassword="True"
+               Text="{Binding Password, Mode=TwoWay}"
                x:Name="passwordEntry"/>
         <Entry Placeholder="Confirmar Clave"
                IsPassword="True"
+               Text="{Binding ConfirmPassword, Mode=TwoWay}"
                x:Name="confirmPasswordEntry"/>
         <Button x:Name="registerButton"
                 Text="REGISTRARSE"
-                Clicked="registerButton_Clicked"
+                Command="{Binding RegisterCommand}"
                 Margin="0,50,0,0"/>
     </StackLayout>
 </ContentPage>
