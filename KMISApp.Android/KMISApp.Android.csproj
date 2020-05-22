@@ -63,6 +63,9 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Behaviors.Forms">
+      <Version>1.4.0</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Azure.Mobile.Client">
       <Version>4.1.2</Version>
     </PackageReference>
@@ -131,227 +134,186 @@
     <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\adquire.png">
+    <AndroidResource Include="Resources\drawable-mdpi\adquire.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-mdpi\adquire.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\adquire.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xhdpi\adquire.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\adquire.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\adquire.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\adquire.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\adquire.png">
+    <AndroidResource Include="Resources\drawable-mdpi\adquireadd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-hdpi\adquireadd.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\adquireadd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-mdpi\adquireadd.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\adquireadd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xhdpi\adquireadd.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\adquireadd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\adquireadd.png">
+    <AndroidResource Include="Resources\drawable-mdpi\buy.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\adquireadd.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\buy.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-hdpi\buy.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\buy.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-mdpi\buy.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\buy.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xhdpi\buy.png">
+    <AndroidResource Include="Resources\drawable-mdpi\offer.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\buy.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\offer.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\buy.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\offer.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-hdpi\offer.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\offer.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-mdpi\offer.png">
+    <AndroidResource Include="Resources\drawable-mdpi\offeradd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xhdpi\offer.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\offeradd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\offer.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\offeradd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\offer.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\offeradd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-hdpi\offeradd.png">
+    <AndroidResource Include="Resources\drawable-mdpi\save.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-mdpi\offeradd.png">
+    <AndroidResource Include="Resources\drawable-xhdpi\save.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xhdpi\offeradd.png">
+    <AndroidResource Include="Resources\drawable-xxhdpi\save.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\offeradd.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\save.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\offeradd.png">
+    <AndroidResource Include="Resources\drawable-hdpi\adquire.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-hdpi\save.png">
+    <AndroidResource Include="Resources\drawable-hdpi\adquireadd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-mdpi\save.png">
+    <AndroidResource Include="Resources\drawable-hdpi\buy.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xhdpi\save.png">
+    <AndroidResource Include="Resources\drawable-hdpi\offer.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\save.png">
+    <AndroidResource Include="Resources\drawable-hdpi\offeradd.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\save.png">
+    <AndroidResource Include="Resources\drawable-hdpi\save.png">
       <SubType>
       </SubType>
       <Generator>
       </Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\adquire.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\adquireadd.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\buy.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\icon.png" />
-    <AndroidResource Include="Resources\drawable\launcher_foreground.png" />
-    <AndroidResource Include="Resources\drawable\offer.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\offeradd.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-    <AndroidResource Include="Resources\drawable\save.png">
-      <SubType>
-      </SubType>
-      <Generator>
-      </Generator>
-    </AndroidResource>
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\americanexpresslogo.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\KMISApp\KMISApp.csproj">
@@ -360,328 +322,280 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_amex.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\americanexpresslogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_amex_blue.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_amex.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_amex_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_amex_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_chip.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_amex_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_cvv.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_chip.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_date.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_cvv.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_dinersclub.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_date.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_dinersclub_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dinersclub.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_discover.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_dinersclub_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_discover_light.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_discover.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_jcb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_discover_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_mastercard.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_jcb.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_mastercard_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_mastercard.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_visa.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_mastercard_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\ic_visa_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_visa.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\nocards.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_visa_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\americanexpresslogo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\nocards.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_amex.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\americanexpresslogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_amex_blue.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_amex.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_amex_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_amex_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_chip.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_amex_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_cvv.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_chip.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_date.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_cvv.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_dinersclub.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_date.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_dinersclub_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dinersclub.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_discover.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_dinersclub_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_discover_light.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_discover.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_jcb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_discover_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_mastercard.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_jcb.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_mastercard_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_mastercard.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_visa.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_mastercard_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_visa_white.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_visa.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\nocards.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_visa_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\americanexpresslogo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\nocards.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_amex.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\americanexpresslogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_amex_blue.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_amex.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_amex_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_amex_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_chip.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_amex_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_cvv.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_chip.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_date.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_cvv.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_dinersclub.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_date.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_dinersclub_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dinersclub.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_discover.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_dinersclub_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_discover_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_discover.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_jcb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_discover_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_mastercard.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_jcb.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_mastercard_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_mastercard.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_visa.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_mastercard_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\ic_visa_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_visa.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\nocards.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_visa_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\americanexpresslogo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\nocards.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_amex.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\americanexpresslogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_amex_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_amex.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_amex_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_amex_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_chip.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_amex_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_cvv.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_chip.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_date.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_cvv.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_dinersclub.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_date.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_dinersclub_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dinersclub.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_discover.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_dinersclub_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_discover_light.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_discover.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_jcb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_discover_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_mastercard.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_jcb.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_mastercard_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_mastercard.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_visa.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_mastercard_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\ic_visa_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_visa.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\nocards.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_visa_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\americanexpresslogo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\nocards.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_amex.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\americanexpresslogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_amex_blue.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_amex.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_amex_light.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_amex_blue.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_chip.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_amex_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_cvv.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chip.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_date.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_cvv.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_dinersclub.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_date.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_dinersclub_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dinersclub.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_discover.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_dinersclub_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_discover_light.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_discover.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_jcb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_discover_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_mastercard.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_jcb.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_mastercard_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_mastercard.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_visa.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_mastercard_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\ic_visa_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_visa.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\nocards.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_visa_white.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\americanexpresslogo.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\nocards.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_amex.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\usersettings.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_amex_blue.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\usersettings.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_amex_light.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\usersettings.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_chip.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\usersettings.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_cvv.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_date.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_dinersclub.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_dinersclub_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_discover.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_discover_light.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_jcb.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_mastercard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_mastercard_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_visa.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\ic_visa_white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\nocards.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\usersettings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\usersettings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\usersettings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xhdpi\usersettings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxhdpi\usersettings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\usersettings.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\usersettings.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

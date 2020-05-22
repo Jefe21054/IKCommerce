@@ -32,6 +32,9 @@
                     <x:String>Amazon Prime Video</x:String>
                 </x:Array>
             </Picker.ItemsSource>
+            <Picker.Behaviors>
+                
+            </Picker.Behaviors>
         </Picker>
     </StackLayout>
 </ContentPage>

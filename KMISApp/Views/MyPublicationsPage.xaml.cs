@@ -49,9 +49,8 @@ namespace KMISApp
                     EmptyEntries();
                 }
             }
-            catch (MobileServiceInvalidOperationException msio)
+            catch (MobileServiceInvalidOperationException)
             {
-                Task<string> response = msio.Response.Content.ReadAsStringAsync();
                 await DisplayAlert("ERROR", "No se puede conectar con la Base de Datos", "OK");
                 EmptyEntries();
             }
