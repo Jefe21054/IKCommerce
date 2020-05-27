@@ -45,6 +45,7 @@
             <BindableLayout.ItemTemplate>
                 <DataTemplate>
                     <Button Text="{Binding Name, StringFormat='Login with {0}'}"
+                            ImageSource="{Binding Icon}"
                             Command="{Binding Path=BindingContext.OnLoginCommand, Source={x:Reference mainLayout}}"
                             CommandParameter="{Binding .}"     
                             HeightRequest="45"
