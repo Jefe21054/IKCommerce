@@ -15,9 +15,18 @@
         <Entry Placeholder="Escribe la clave de la cuenta"
                x:Name="passwordEntry"/>
         <Picker Title="Escoje el servicio ofertado"
-                x:Name="servicePicker"
-                ItemsSource="{Binding local:Servicios}"
-                ItemDisplayBinding="{Binding ServiceName}">
+                x:Name="servicePicker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Netflix</x:String>
+                    <x:String>Spotify</x:String>
+                    <x:String>Deezer</x:String>
+                    <x:String>Disney+</x:String>
+                    <x:String>Hulu</x:String>
+                    <x:String>Nintendo Online</x:String>
+                    <x:String>Amazon Prime Video</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
         </Picker>
         <Button Margin="0,50,0,0"
                 x:Name="updateButton"

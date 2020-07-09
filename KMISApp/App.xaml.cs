@@ -9,7 +9,6 @@ namespace KMISApp
         public static string DataBaseLocation = string.Empty;
         public static MobileServiceClient MobileService = new MobileServiceClient("https://ikcommerce.azurewebsites.net");
         public static Usuario usuario = new Usuario();
-        public static Servicios servicios = new Servicios();
 
         public App()
         {

@@ -54,8 +54,6 @@ namespace KMISApp.ViewModels
             }
         }
 
-        private string nombreServicio;
-
         private int index;
 
         public int Index
