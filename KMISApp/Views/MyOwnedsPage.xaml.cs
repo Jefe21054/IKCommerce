@@ -1,4 +1,4 @@
-﻿using KMISApp.Model;
+﻿using KMISApp.Models;
 using SQLite;
 using System.Collections.Generic;
 using Xamarin.Forms;

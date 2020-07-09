@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace KMISApp.Model
+namespace KMISApp.Models
 {
     public class RegisterBindingModel
     {

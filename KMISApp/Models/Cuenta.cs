@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Threading.Tasks;
 
-namespace KMISApp.Model
+namespace KMISApp.Models
 {
     public class Cuenta : INotifyPropertyChanged
     {

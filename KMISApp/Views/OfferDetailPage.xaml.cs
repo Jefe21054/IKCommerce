@@ -1,4 +1,5 @@
-﻿using KMISApp.Model;
+﻿using KMISApp.Models;
+using KMISApp.ViewModels;
 using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Threading.Tasks;

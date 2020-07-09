@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace KMISApp.Model
+namespace KMISApp.Models
 {
     public class Usuario : INotifyPropertyChanged
     {

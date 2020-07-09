@@ -1,6 +1,6 @@
 ﻿using SQLite;
 
-namespace KMISApp.Model
+namespace KMISApp.Models
 {
     public class Post
     {

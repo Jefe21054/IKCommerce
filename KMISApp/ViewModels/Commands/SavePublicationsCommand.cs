@@ -5,6 +5,13 @@ namespace KMISApp.ViewModels.Commands
 {
     public class SavePublicationsCommand : ICommand
     {
+        public MyPublicationsPageViewModel MyPublicationsPageViewModel { get; set; }
+
+        public SavePublicationsCommand(MyPublicationsPageViewModel myPublicationsPageViewModel)
+        {
+            MyPublicationsPageViewModel = myPublicationsPageViewModel;
+        }
+
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
@@ -14,7 +21,7 @@ namespace KMISApp.ViewModels.Commands
 
         public void Execute(object parameter)
         {
-            
+            MyPublicationsPageViewModel.Save();
         }
     }
 }

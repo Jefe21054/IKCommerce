@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KMISApp.MyPublicationsPage">
     <ContentPage.ToolbarItems>
         <ToolbarItem x:Name="save"
                      Text="GUARDAR"
                      IconImageSource="save.png"
-                     Clicked="save_Clicked"/>
+                     Command="{Binding SavePublicationsCommand}"/>
     </ContentPage.ToolbarItems>
     <StackLayout Margin="30"
                  VerticalOptions="Center"
@@ -18,23 +18,13 @@
                Text="{Binding Email, Mode=TwoWay}"/>
         <Entry Placeholder="Escribe la clave de la cuenta"
                x:Name="passwordEntry"
-               Text="{Binding Clave, Mode=TwoWay}"/>
+               Text="{Binding Password, Mode=TwoWay}"/>
         <Picker Title="Escoje el servicio ofertado"
-                x:Name="servicePicker">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Netflix</x:String>
-                    <x:String>Spotify</x:String>
-                    <x:String>Deezer</x:String>
-                    <x:String>Disney+</x:String>
-                    <x:String>Hulu</x:String>
-                    <x:String>Nintendo Online</x:String>
-                    <x:String>Amazon Prime Video</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-            <Picker.Behaviors>
-                
-            </Picker.Behaviors>
+                x:Name="servicePicker"
+                ItemsSource="{Binding Servicios}"
+                ItemDisplayBinding="{Binding ServiceName}"
+                SelectedItem="{Binding SelectedService}"
+                SelectedIndex="{Binding Index, Mode=TwoWay}">
         </Picker>
     </StackLayout>
 </ContentPage>

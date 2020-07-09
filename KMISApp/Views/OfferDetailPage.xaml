@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:KMISApp.ViewModels"
              mc:Ignorable="d"
              x:Class="KMISApp.OfferDetailPage">
     <StackLayout Margin="30"
@@ -14,18 +15,9 @@
         <Entry Placeholder="Escribe la clave de la cuenta"
                x:Name="passwordEntry"/>
         <Picker Title="Escoje el servicio ofertado"
-                x:Name="servicePicker">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Netflix</x:String>
-                    <x:String>Spotify</x:String>
-                    <x:String>Deezer</x:String>
-                    <x:String>Disney+</x:String>
-                    <x:String>Hulu</x:String>
-                    <x:String>Nintendo Online</x:String>
-                    <x:String>Amazon Prime Video</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
+                x:Name="servicePicker"
+                ItemsSource="{Binding local:Servicios}"
+                ItemDisplayBinding="{Binding ServiceName}">
         </Picker>
         <Button Margin="0,50,0,0"
                 x:Name="updateButton"

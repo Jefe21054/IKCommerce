@@ -1,4 +1,4 @@
-﻿namespace KMISApp.Model
+﻿namespace KMISApp.Models
 {
     public class AuthNetwork
     {

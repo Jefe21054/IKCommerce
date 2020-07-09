@@ -1,5 +1,5 @@
 ﻿using System;
-using KMISApp.Model;
+using KMISApp.Models;
 using SQLite;
 using Xamarin.Forms;
 

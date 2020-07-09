@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace KMISApp.Model
+namespace KMISApp.Models
 {
     public class Data
     {

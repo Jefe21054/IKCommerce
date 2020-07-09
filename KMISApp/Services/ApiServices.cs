@@ -1,10 +1,7 @@
-﻿using KMISApp.Model;
+﻿using KMISApp.Models;
 using Newtonsoft.Json;
 using System;
-using Microsoft.WindowsAzure.MobileServices;
-using System.Linq;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;

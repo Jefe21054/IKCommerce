@@ -9,6 +9,7 @@
     <Application.Resources>
         <Color x:Key="myColor">#1E90FF</Color>
         <Color x:Key="myWhite">#FFFFFF</Color>
+        <Color x:Key="fondo">#FAFAFA</Color>
         <Style TargetType="Button">
             <Setter Property="BackgroundColor" Value="{StaticResource myColor}"/>
             <Setter Property="TextColor" Value="{StaticResource myWhite}"/>
